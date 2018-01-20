@@ -3,7 +3,7 @@ SELECT
 		'public  ',
 		CASE
 	WHEN data_type IN ('varchar', 'char', 'text') THEN
-		'string'
+		'String'
 	WHEN data_type IN (
 		'int',
 		'tinyint',

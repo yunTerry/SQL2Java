@@ -9,7 +9,7 @@ begin
 			'public  ',
 			case
 		when data_type in ('varchar', 'char', 'text') then
-			'string'
+			'String'
 		when data_type in (
 			'int',
 			'tinyint',
