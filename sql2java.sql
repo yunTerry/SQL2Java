@@ -14,20 +14,21 @@ begin
 			'int',
 			'tinyint',
 			'mediumint',
-			'smallint',
-			'bigint'
-		) then
-			'int'
-		when data_type in ('integer', 'id') then
-			'long'
-		when data_type in ('bit', 'boolean') then
-			'boolean'
-		when data_type in ('float') then
-			'float'
-		when data_type in ('double') then
-			'double'
-		when data_type in ('blob') then
-			'byte[]'
+			'smallint'
+		) THEN
+			'Integer'
+		WHEN data_type IN ('bigint') THEN
+			'Long'
+		when data_type in ('datetime') then
+			'Date'
+		WHEN data_type IN ('bit', 'boolean') THEN
+			'Boolean'
+		WHEN data_type IN ('float') THEN
+			'Float'
+		WHEN data_type IN ('double') THEN
+			'Double'
+		WHEN data_type IN ('blob') THEN
+			'Byte[]'
 		else
 			'类型不确定'
 		end,

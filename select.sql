@@ -8,20 +8,21 @@ SELECT
 		'int',
 		'tinyint',
 		'mediumint',
-		'smallint',
-		'bigint'
+		'smallint'
 	) THEN
-		'int'
-	WHEN data_type IN ('integer', 'id') THEN
-		'long'
+		'Integer'
+	WHEN data_type IN ('bigint') THEN
+		'Long'
+	when data_type in ('datetime') then
+		'Date'
 	WHEN data_type IN ('bit', 'boolean') THEN
-		'boolean'
+		'Boolean'
 	WHEN data_type IN ('float') THEN
-		'float'
+		'Float'
 	WHEN data_type IN ('double') THEN
-		'double'
+		'Double'
 	WHEN data_type IN ('blob') THEN
-		'byte[]'
+		'Byte[]'
 	ELSE
 		'类型不确定'
 	END,
